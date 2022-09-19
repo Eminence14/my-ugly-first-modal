@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: 0;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0,0,0,.05);
+    border-radius: 5px;
+}
+
+body {
+    padding: 10px;
+    font-family: 'Fira Code', sans-serif;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 900;
+    font-size: 1.3em;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+}
+
+.modal-head .close {
+    font-weight: 900;
+    font-size: 1.2em;
+    background: none;
+}
+
+.modal-body {
+    font-size: .9em;
+    padding: 10px;
+}
+
+button.learn {
+    font-size: 1.05em;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
